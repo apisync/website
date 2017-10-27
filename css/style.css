@@ -12,7 +12,7 @@ body {
   padding-top: 10px;
   color: white;
 
-  background: black url("../images/panel-background.png") no-repeat center;
+  background: black url("../images/panel-background.jpg") no-repeat center;
 }
 
 .main-panel header {
@@ -21,7 +21,7 @@ body {
 }
 .main-panel header .logo {
   padding-left: 10px;
-  padding-bottom: 4px;
+  padding-bottom: 0px;
 }
 .main-panel header .links {
   text-align: right;
@@ -47,9 +47,9 @@ body {
 }
 
 #mc_embed_signup .label {
-  display: table;
+  display: table !important;
   margin: 0 auto;
-  margin-top: 55px;
+  margin-top: 45px;
   margin-bottom: 10px;
   font-size: 0.8em;
 }
@@ -71,16 +71,20 @@ body {
 
 input[type=submit] {
   padding: 5px 15px;
-  background: #1DC09B;
-  color: white;
+  background: #1DC09B !important;
+  color: white !important;
   font-size: 0.9em;
   border: 0 none;
   cursor: pointer;
   -webkit-border-radius: 5px;
+  -webkit-appearance: none;
   border-radius: 5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .main-panel header .logo {
+    padding-top: 3px;
+  }
   .graph {
     width: 308px;
     height: 273px;
@@ -91,7 +95,10 @@ input[type=submit] {
     background-size: 308px 273px;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
+  .main-panel header .logo {
+    padding-bottom: 4px;
+  }
   .graph {
     width: 616px;
     height: 273px;
